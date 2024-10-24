@@ -4,7 +4,7 @@ import zipfile
 from werkzeug.utils import secure_filename
 
 app = Flask(__name__)
-app.config['UPLOAD_FOLDER'] = 'uploads'
+app.config['UPLOAD_FOLDER'] = '/tmp/uploads'
 
 if not os.path.exists(app.config['UPLOAD_FOLDER']): #MAKING UPLOAD FOLDER IF IT DOES NOT EXITS ALREADY
     os.makedirs(app.config['UPLOAD_FOLDER'])
